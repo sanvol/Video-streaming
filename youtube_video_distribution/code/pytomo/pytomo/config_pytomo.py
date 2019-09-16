@@ -53,7 +53,7 @@ LOOP = False
 RELATED = False
 
 # Image file to save the graphs
-PLOT = 'plotted_metrics.png'
+PLOT = False  # 'plotted_metrics.png'
  # List containig the column names to be plotted
 COLUMN_NAMES = [
     # Contains all possible metrics
@@ -105,7 +105,11 @@ STD_HEADERS = {
 
 ################################################################################
 # for start_pytomo.py
-STATIC_URL_LIST = YoutubeHelper.youtube_json_schema_to_url(load_json_from_file('../../../../data/videos.json'))
+import os
+current_directory = os.getcwd()
+video_file_path = os.path.join(current_directory, 'data/videos.json')
+video_json = load_json_from_file(video_file_path)
+STATIC_URL_LIST = YoutubeHelper.api_response_to_video_url_list(video_json)
 INPUT_FILE = None
 
 # Max number of rounds to perform

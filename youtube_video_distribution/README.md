@@ -1,1 +1,17 @@
 # Investigation of Youtube Video Distribution
+
+Test Cases:
+- Locations: Otaniemi, (AWS server abroad)
+- Time: peak hours ~18-19, off peak hours (at night/during day)
+
+Test Tools:
+- pytomo
+
+Metrics:
+- video urls
+- cache server urls(server naming)
+- ip addresses
+- location(client, cdn) and their impact on each other
+- time of day/ traffic
+- delays
+

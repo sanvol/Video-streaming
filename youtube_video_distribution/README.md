@@ -15,3 +15,6 @@ Metrics:
 - time of day/ traffic
 - delays
 
+***
+Helpful pytomo article:
+https://archive.nanog.org/meetings/nanog57/presentations/Tuesday/tues.general.Medhi.Youtube.18.pdf

@@ -126,7 +126,7 @@ class YoutubeIE(lib_general_download.InfoExtractor):
         self.report_video_webpage_download(video_id)
         video_info = None
         for el_type in ['&el=embedded', '&el=detailpage', '&el=vevo', '']:
-            video_info_url = ('http://www.youtube.com/get_video_info?\
+            video_info_url = ('https://www.youtube.com/get_video_info?\
 &video_id=%s%s&ps=default&eurl=&gl=US&hl=en' % (video_id, el_type))
             request = urllib2.Request(video_info_url, None,
                                       config_pytomo.STD_HEADERS)

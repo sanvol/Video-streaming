@@ -14,7 +14,7 @@ def load_json_from_file(path):
 
 class YoutubeHelper:
 
-    URL_PREFIX = 'http://www.youtube.com/watch'
+    URL_PREFIX = 'www.youtube.com/watch'
     VIDEO_QUERY_PARAM = 'v'
 
     def __init__(self):

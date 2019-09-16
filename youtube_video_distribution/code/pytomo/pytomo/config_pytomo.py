@@ -49,8 +49,7 @@ LOOP = False
 #LOOP = True
 
 # take related links
-#RELATED = True
-RELATED = False
+RELATED = True
 
 # Image file to save the graphs
 PLOT = False  # 'plotted_metrics.png'

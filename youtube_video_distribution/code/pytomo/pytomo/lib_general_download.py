@@ -10,26 +10,28 @@ calculate the data downloaded within that time
 """
 
 from __future__ import with_statement, absolute_import
+
 import httplib
 import math
+import os
 import socket
+import ssl
 import sys
+import tempfile
 import time
 import urllib2
-import tempfile
-import os
-import ssl
 from urlparse import urlsplit
-#import cookielib
-
-from . import kaa_metadata
-from .kaa_metadata.core import ParseError
-
-#from .flvlib.scripts import debug_flv
-from .flvlib import tags
 
 from . import config_pytomo
+from . import kaa_metadata
 from . import lib_links_extractor
+# from .flvlib.scripts import debug_flv
+from .flvlib import tags
+from .kaa_metadata.core import ParseError
+
+# import cookielib
+
+
 
 # video download is a FSM with the following states
 INITIAL_BUFFERING_STATE = 0
@@ -485,7 +487,7 @@ template')
         while count <= retries:
             # Establish connection
             try:
-                data = urllib2.urlopen(request, context=ssl.create_unverified_context())
+                data = urllib2.urlopen(request, context=ssl._create_unverified_context())
                 #data = opener.open(request)
                 break
             except (urllib2.HTTPError, ), err:
@@ -497,7 +499,7 @@ template')
                     config_pytomo.LOG.exception(err)
                     try:
                         # Open the connection again without the range header
-                        data = urllib2.urlopen(request, context=ssl.create_unverified_context())
+                        data = urllib2.urlopen(request, context=ssl._create_unverified_context())
                         #data = opener.open(basic_request)
                     except (urllib2.HTTPError, ), err:
                         if err.code < 500 or err.code >= 600:

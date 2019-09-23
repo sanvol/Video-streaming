@@ -18,3 +18,5 @@ Metrics:
 ***
 Helpful pytomo article:
 https://archive.nanog.org/meetings/nanog57/presentations/Tuesday/tues.general.Medhi.Youtube.18.pdf
+
+Reverse engineering youtube: https://tyrrrz.me/blog/reverse-engineering-youtube

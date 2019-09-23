@@ -142,9 +142,6 @@ class YoutubeIE(lib_general_download.InfoExtractor):
                 video_info = parse_qs(video_info_webpage)
                 if 'account_playback_token' in video_info:
                     break
-                if 'sts' in video_info:
-                    video_info['token'] = video_info['sts']
-                    break
             except (urllib2.URLError, httplib.HTTPException, socket.error), err:
                 self._downloader.trouble(
                     u'ERROR: unable to download video info webpage: %s'

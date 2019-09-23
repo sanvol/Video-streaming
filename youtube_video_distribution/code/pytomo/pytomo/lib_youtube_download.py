@@ -39,7 +39,8 @@ import urllib
 import urllib2
 
 # for python2.5 only
-from cgi import parse_qs
+from cgi import parse_qs as parse_qs_deprecated
+from urlparse import parse_qs
 
 from . import config_pytomo
 from . import lib_general_download
@@ -137,8 +138,12 @@ class YoutubeIE(lib_general_download.InfoExtractor):
             try:
                 video_info_webpage = urllib2.urlopen(request,
                                      timeout=config_pytomo.URL_TIMEOUT).read()
+
                 video_info = parse_qs(video_info_webpage)
                 if 'account_playback_token' in video_info:
+                    break
+                if 'sts' in video_info:
+                    video_info['token'] = video_info['sts']
                     break
             except (urllib2.URLError, httplib.HTTPException, socket.error), err:
                 self._downloader.trouble(

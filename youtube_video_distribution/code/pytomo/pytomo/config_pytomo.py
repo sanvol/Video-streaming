@@ -106,7 +106,7 @@ STD_HEADERS = {
 # for start_pytomo.py
 import os
 current_directory = os.getcwd()
-video_file_path = os.path.join(current_directory, '../../data/videos.json')
+video_file_path = os.path.join(current_directory, 'data/videos.json')
 video_json = load_json_from_file(video_file_path)
 STATIC_URL_LIST = YoutubeHelper.api_response_to_video_url_list(video_json)
 INPUT_FILE = None

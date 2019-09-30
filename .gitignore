@@ -1,6 +1,6 @@
 .idea/
 *.pyc
 logs/
-databases/
+youtube_video_distribution/databases/
 plots/
 

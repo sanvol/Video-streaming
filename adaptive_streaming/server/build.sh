@@ -13,20 +13,25 @@ confirm() {
     esac
 }
 
+remove_container() {
+    CONTAINER=$(docker ps | grep $1 | awk {'print $1'})
+    docker stop $CONTAINER
+    docker rm $CONTAINER
+}
+
 cd $(dirname $0)
 # https://hub.docker.com/r/tiangolo/nginx-rtmp/dockerfile
-IMAGE=tiangolo/nginx-rtmp
+IMAGE=adaptive_streaming
+NAME=nginx-rtmp
 while true; do
     # For static content:
     # CONTENT=../dist
     # --mount source=$CONTENT,target=/usr/local/nginx/html/
-    if docker run -d --name nginx-rtmp $IMAGE ; then
+    if docker build -t $IMAGE . && docker run -d $IMAGE ; then
         echo "Container running"
         break;  
-    elif confirm "Would you like to rebuild the image? [y/n]" ; then
-        CONTAINER=$(docker ps | grep $IMAGE | awk {'print $1'})
-        docker stop $CONTAINER >> /dev/null
-        docker rm $CONTAINER >> /dev/null
+    elif confirm "Would you like to remove old image? [y/n]" ; then
+        remove_container $IMAGE >> /dev/null
         continue;
     else
         echo "Using old build"

@@ -27,7 +27,7 @@ while true; do
     # For static content:
     # CONTENT=../dist
     # --mount source=$CONTENT,target=/usr/local/nginx/html/
-    if docker build -t $IMAGE . && docker run -d $IMAGE ; then
+    if docker build -t $IMAGE . && docker run -p 8080:8080 -p 1935:1935 -d $IMAGE ; then
         echo "Container running"
         break;  
     elif confirm "Would you like to remove old image? [y/n]" ; then

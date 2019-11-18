@@ -20,14 +20,25 @@ remove_container() {
 }
 
 cd $(dirname $0)
-# https://hub.docker.com/r/tiangolo/nginx-rtmp/dockerfile
+
+# CONFIGS
 IMAGE=adaptive_streaming
 NAME=nginx-rtmp
+DASH_VOLUME=dash_volume
+HLS_VOLUME=hls_volume
+
+docker volume create $DASH_VOLUME > /dev/null
+docker volume create $HLS_VOLUME > /dev/null
+
 while true; do
     # For static content:
     # CONTENT=../dist
     # --mount source=$CONTENT,target=/usr/local/nginx/html/
-    if docker build -t $IMAGE . && docker run -p 8080:8080 -p 1935:1935 -d $IMAGE ; then
+    if docker build -t $IMAGE . && \
+        docker run -p 8080:8080 -p 1935:1935 \
+        --mount source=$DASH_VOLUME,target=/var/lib/dash \
+        --mount source=$HLS_VOLUME,target=/var/lib/hls \
+        -d $IMAGE ; then
         echo "Container running"
         break;  
     elif confirm "Would you like to remove old image? [y/n]" ; then

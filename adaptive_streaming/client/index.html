@@ -7,30 +7,30 @@
     <link rel="icon" type="image/x-icon" href="https://dashif.org/wp-content/uploads/2014/12/dashif.ico">
     <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
 
-    <link rel="stylesheet" href="./bootstrap.min.css">
-    <link rel="stylesheet" href="./bootstrap-theme.css">
-    <link rel="stylesheet" href="./bootstrap-glyphicons.css">
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./controlbar.css">
+    <link rel="stylesheet" href="./static/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/bootstrap-theme.css">
+    <link rel="stylesheet" href="./static/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="./static/main.css">
+    <link rel="stylesheet" href="./static/controlbar.css">
 
     <!--Libs-->
-    <script src="./jquery-3.1.1.min.js"></script>
+    <script src="./static/jquery-3.1.1.min.js"></script>
 
-    <script src="./angular.min.js"></script>
-    <script src="./angular-resource.min.js"></script>
-    <script src="./angular-flot.js"></script>
+    <script src="./static/angular.min.js"></script>
+    <script src="./static/angular-resource.min.js"></script>
+    <script src="./static/angular-flot.js"></script>
 
-    <script src="./bootstrap.min.js"></script>
+    <script src="./static/bootstrap.min.js"></script>
 
-    <script src="./jquery.flot.min.js"></script>
-    <script src="./jquery.flot.resize.min.js"></script>
-    <script src="./jquery.flot.axislabels.js"></script>
+    <script src="./static/jquery.flot.min.js"></script>
+    <script src="./static/jquery.flot.resize.min.js"></script>
+    <script src="./static/jquery.flot.axislabels.js"></script>
     <!-- App -->
-    <script src="./dash.all.debug.js"></script>
-    <script src="./ControlBar.js"></script>
-    <script src="./main.js"></script>
-    <script src="./DownloadRatioRule.js"></script>
-    <script src="./ThroughputRule.js"></script>
+    <script src="./static/dash.all.debug.js"></script>
+    <script src="./static/ControlBar.js"></script>
+    <script src="./static/main.js"></script>
+    <script src="./static/DownloadRatioRule.js"></script>
+    <script src="./static/ThroughputRule.js"></script>
 
 </head>
 <body ng-controller="DashController" class="ng-scope">
@@ -1326,7 +1326,7 @@
         <div class="row title-header">
 
             <div class="branding">
-              <a href="http://dashif.org/" target="_blank"><img class="image" src="./if.png"></a>
+              <a href="http://dashif.org/" target="_blank"><img class="image" src="./static/if.png"></a>
               <span id="big-title">Reference Client</span>
                 <span ng-bind="version" class="ng-binding">3.0.0</span>
                 <span id="commit-info"><!-- commit-info --></span>
@@ -1334,9 +1334,9 @@
 
             <!-- Using iframe to solve pre-flight request issue from GIT-->
             <div class="top-buttons">
-                <iframe id="star-button" src="./github-btn.html" height="30" width="150">
+                <iframe id="star-button" src="./static/github-btn.html" height="30" width="150">
                 </iframe>
-                <iframe id="fork-button" src="./github-btn(1).html" height="30" width="150">
+                <iframe id="fork-button" src="./static/github-btn(1).html" height="30" width="150">
                 </iframe>
             </div>
         </div>
@@ -2751,34 +2751,34 @@
                 <div class="col-md-12">
                     <h3 class="footer-text">Contributors:</h3>
                     <!-- ngRepeat: item in contributors --><a ng-repeat="item in contributors" class="footer-text ng-scope" href="http://www.digitalprimates.net/" target="_blank">
-                        <img ng-show="hasLogo(item)" ng-src="app/img/dp.png" alt="http://www.digitalprimates.net" src="./dp.png">
+                        <img ng-show="hasLogo(item)" ng-src="app/img/dp.png" alt="http://www.digitalprimates.net" src="./static/dp.png">
                         <span class="contributor ng-binding ng-hide" ng-show="!hasLogo(item)">Digital Primates</span>
                     </a><!-- end ngRepeat: item in contributors --><a ng-repeat="item in contributors" class="footer-text ng-scope" href="http://www.akamai.com/" target="_blank">
-                        <img ng-show="hasLogo(item)" ng-src="app/img/akamai.png" alt="http://www.akamai.com" src="./akamai.png">
+                        <img ng-show="hasLogo(item)" ng-src="app/img/akamai.png" alt="http://www.akamai.com" src="./static/akamai.png">
                         <span class="contributor ng-binding ng-hide" ng-show="!hasLogo(item)">Akamai</span>
                     </a><!-- end ngRepeat: item in contributors --><a ng-repeat="item in contributors" class="footer-text ng-scope" href="http://msopentech.com/" target="_blank">
-                        <img ng-show="hasLogo(item)" ng-src="app/img/MSOpenTech.jpg" alt="http://msopentech.com" src="./MSOpenTech.jpg">
+                        <img ng-show="hasLogo(item)" ng-src="app/img/MSOpenTech.jpg" alt="http://msopentech.com" src="./static/MSOpenTech.jpg">
                         <span class="contributor ng-binding ng-hide" ng-show="!hasLogo(item)">Microsoft Open Technologies</span>
                     </a><!-- end ngRepeat: item in contributors --><a ng-repeat="item in contributors" class="footer-text ng-scope" href="https://www.fokus.fraunhofer.de/go/fame" target="_blank">
-                        <img ng-show="hasLogo(item)" ng-src="app/img/fh_fokus.png" alt="https://www.fokus.fraunhofer.de/go/fame" src="./fh_fokus.png">
+                        <img ng-show="hasLogo(item)" ng-src="app/img/fh_fokus.png" alt="https://www.fokus.fraunhofer.de/go/fame" src="./static/fh_fokus.png">
                         <span class="contributor ng-binding ng-hide" ng-show="!hasLogo(item)">Fraunhofer Fokus</span>
                     </a><!-- end ngRepeat: item in contributors --><a ng-repeat="item in contributors" class="footer-text ng-scope" href="http://www.cablelabs.com/" target="_blank">
-                        <img ng-show="hasLogo(item)" ng-src="app/img/cablelabs.png" alt="http://www.cablelabs.com" src="./cablelabs.png">
+                        <img ng-show="hasLogo(item)" ng-src="app/img/cablelabs.png" alt="http://www.cablelabs.com" src="./static/cablelabs.png">
                         <span class="contributor ng-binding ng-hide" ng-show="!hasLogo(item)">CableLabs</span>
                     </a><!-- end ngRepeat: item in contributors --><a ng-repeat="item in contributors" class="footer-text ng-scope" href="http://www.youtube.com/" target="_blank">
-                        <img ng-show="hasLogo(item)" ng-src="app/img/youtube.png" alt="http://www.youtube.com" src="./youtube.png">
+                        <img ng-show="hasLogo(item)" ng-src="app/img/youtube.png" alt="http://www.youtube.com" src="./static/youtube.png">
                         <span class="contributor ng-binding ng-hide" ng-show="!hasLogo(item)">YouTube</span>
                     </a><!-- end ngRepeat: item in contributors --><a ng-repeat="item in contributors" class="footer-text ng-scope" href="https://github.com/senthil-codr" target="_blank">
                         <img ng-show="hasLogo(item)" alt="https://github.com/senthil-codr" class="ng-hide">
                         <span class="contributor ng-binding" ng-show="!hasLogo(item)">Senthil</span>
                     </a><!-- end ngRepeat: item in contributors --><a ng-repeat="item in contributors" class="footer-text ng-scope" href="https://www.brightcove.com/" target="_blank">
-                        <img ng-show="hasLogo(item)" ng-src="app/img/brightcove.png" alt="https://www.brightcove.com" src="./brightcove.png">
+                        <img ng-show="hasLogo(item)" ng-src="app/img/brightcove.png" alt="https://www.brightcove.com" src="./static/brightcove.png">
                         <span class="contributor ng-binding ng-hide" ng-show="!hasLogo(item)">Brightcove</span>
                     </a><!-- end ngRepeat: item in contributors --><a ng-repeat="item in contributors" class="footer-text ng-scope" href="http://www.edgeware.tv/" target="_blank">
-                        <img ng-show="hasLogo(item)" ng-src="app/img/edgeware.png" alt="http://www.edgeware.tv/" src="./edgeware.png">
+                        <img ng-show="hasLogo(item)" ng-src="app/img/edgeware.png" alt="http://www.edgeware.tv/" src="./static/edgeware.png">
                         <span class="contributor ng-binding ng-hide" ng-show="!hasLogo(item)">Edgeware</span>
                     </a><!-- end ngRepeat: item in contributors --><a ng-repeat="item in contributors" class="footer-text ng-scope" href="https://www.epiclabs.io/" target="_blank">
-                        <img ng-show="hasLogo(item)" ng-src="app/img/epiclabs.png" alt="https://www.epiclabs.io/" src="./epiclabs.png">
+                        <img ng-show="hasLogo(item)" ng-src="app/img/epiclabs.png" alt="https://www.epiclabs.io/" src="./static/epiclabs.png">
                         <span class="contributor ng-binding ng-hide" ng-show="!hasLogo(item)">Epic Labs</span>
                     </a><!-- end ngRepeat: item in contributors -->
                 </div>

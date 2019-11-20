@@ -25,17 +25,9 @@ remove_container() {
 
 cd $(dirname $0)
 
-# CONFIGS
 IMAGE=adaptive_streaming
-NAME=nginx-rtmp
-# STREAMING_VOLUME=dash_volume
-
-# docker volume create $STREAMING_VOLUME > /dev/null
-
 while true; do
-    # For static content:
-    # CONTENT=../dist
-    # --mount source=$CONTENT,target=/usr/local/nginx/html/
+    remove_container $IMAGE > /dev/null
     if docker build -t $IMAGE . && \
         docker run -p 8080:8080 -p 1935:1935 \
         -d $IMAGE ; then
@@ -46,11 +38,11 @@ while true; do
             docker cp dashvideo/. $c:/var/lib/stream/dash/
         fi
         break;
-    elif confirm "Would you like to remove old image? [y/n]" ; then
-        remove_container $IMAGE >> /dev/null
+    elif confirm "An error occurred while building image. Would you like to try again? [y/n]" ; then
         continue;
     else
-        echo "Using old build"
+        echo "Build failed but retry was rejected. The current running containers are:"
+        docker ps
         break;
     fi
 done

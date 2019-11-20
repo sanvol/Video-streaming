@@ -27,7 +27,7 @@ cd $(dirname $0)
 
 IMAGE=adaptive_streaming
 while true; do
-    remove_container $IMAGE > /dev/null
+    remove_container $IMAGE 2> /dev/null
     if docker build -t $IMAGE . && \
         docker run -p 8080:8080 -p 1935:1935 \
         -d $IMAGE ; then

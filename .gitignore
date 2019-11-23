@@ -3,5 +3,7 @@
 youtube_video_distribution/databases/
 youtube_video_distribution/logs/
 plots/
-dashvideo/
-
+adaptive_streaming/dashvideo/*
+adaptive_streaming/hlsvideo/*
+!adaptive_streaming/dashvideo/README.md
+!adaptive_streaming/hlsvideo/README.md

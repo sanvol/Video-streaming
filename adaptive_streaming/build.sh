@@ -23,6 +23,7 @@ remove_container() {
     docker rm $CONTAINER
 }
 
+cwd=$(pwd)
 cd $(dirname $0)
 
 IMAGE=adaptive_streaming
@@ -32,11 +33,20 @@ while true; do
         docker run -p 8080:8080 -p 1935:1935 \
         -d $IMAGE ; then
         echo "Container running"
-        if confirm "Do you want to copy files from dashvideo/ to container? [y/n]" ; then
-            c=$(container $IMAGE)
-            echo "Copying videos to container ${c}"
-            docker cp dashvideo/. $c:/var/lib/stream/dash/
-        fi
+
+        sources=("dashvideo/." "hlsvideo/.")
+        destinations=("/var/lib/stream/dash/" "/var/lib/stream/hls/")
+        c=$(container $IMAGE)
+
+        for i in "${!sources[@]}"; do
+            src=${sources[$i]}
+            dst=${destinations[$i]}
+            if confirm "Do you want to copy files from $src to $c:$dst? [y/n]" ; then
+                echo "Copying files"
+                docker cp $src $c:$dst
+            fi
+        done
+
         break;
     elif confirm "An error occurred while building image. Would you like to try again? [y/n]" ; then
         continue;
@@ -46,4 +56,5 @@ while true; do
         break;
     fi
 done
-cd - >> /dev/null
+
+cd $cwd

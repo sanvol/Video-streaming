@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./static/hls/bootstrap.min.css">
     <link rel="stylesheet" href="./static/hls/bootstrap-theme.min.css">
     <link rel="stylesheet" href="./static/hls/style.css">
-    <script src="./static/hls/"></script>
+    <script src="./static/hls/jquery.min.js"></script>
     <script src="./static/hls/bootstrap.min.js"></script>
     <script src="./static/hls/FileSaver.min.js"></script>
     <script src="./static/hls/ace.js"></script>
@@ -86,7 +86,7 @@
 
           <label class="innerControls">
             Current video-resolution:
-            <span id="currentResolution">1920 x 1080</span>
+            <span id="currentResolution">1280 x 720</span>
           </label>
 
           <label class="innerControls">
@@ -97,7 +97,7 @@
 
         <div class="config-editor-wrapper">
           <div class="config-editor-container">
-              <div id="config-editor" class=" ace_editor ace_hidpi ace-github"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px; height: 1px; width: 1px; transform: translate(44px, 12px);"></textarea><div class="ace_gutter" aria-hidden="true" style="left: 0px; width: 40px;"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px; transform: translate(0px, 0px); width: 40px;"><div class="ace_gutter-cell ace_gutter-active-line " style="height: 12px; top: 0px;">1<span style="display: inline-block; height: 12px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 12px; top: 12px;">2<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 12px; top: 24px;">3<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 12px; top: 36px;">4<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 12px; top: 48px;">5<span style="display: none;"></span></div></div></div><div class="ace_scroller" style="left: 40px; right: 0px; bottom: 0px;"><div class="ace_content" style="transform: translate(0px, 0px); width: 558px; height: 282px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 484px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height: 12px; top: 0px; left: 0px; right: 0px;"></div></div><div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px; transform: translate(0px, 0px);"><div class="ace_line" style="height: 12px; top: 0px;"><span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height: 12px; top: 12px;">  <span class="ace_variable">"debug"</span>: <span class="ace_constant ace_language ace_boolean">true</span>,</div><div class="ace_line" style="height: 12px; top: 24px;">  <span class="ace_variable">"enableWorker"</span>: <span class="ace_constant ace_language ace_boolean">true</span>,</div><div class="ace_line" style="height: 12px; top: 36px;">  <span class="ace_variable">"liveBackBufferLength"</span>: <span class="ace_constant ace_numeric">900</span></div><div class="ace_line" style="height: 12px; top: 48px;"><span class="ace_paren ace_rparen">}</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="display: block; transform: translate(4px, 0px); width: 6px; height: 12px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 60px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 40px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 558px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">הההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההה</div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+              <div id="config-editor" class=" ace_editor ace_hidpi ace-github"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px; height: 1px; width: 1px; transform: translate(45px, 16px);"></textarea><div class="ace_gutter" aria-hidden="true" style="left: 0px; width: 41px;"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px; transform: translate(0px, 0px); width: 41px;"><div class="ace_gutter-cell ace_gutter-active-line " style="height: 16px; top: 0px;">1<span style="display: inline-block; height: 16px;" class="ace_fold-widget ace_start ace_open"></span></div><div class="ace_gutter-cell " style="height: 16px; top: 16px;">2<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 16px; top: 32px;">3<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 16px; top: 48px;">4<span style="display: none;"></span></div><div class="ace_gutter-cell " style="height: 16px; top: 64px;">5<span style="display: none;"></span></div></div></div><div class="ace_scroller" style="left: 41px; right: 0px; bottom: 0px;"><div class="ace_content" style="transform: translate(0px, 0px); width: 557px; height: 276px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 580px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height: 16px; top: 0px; left: 0px; right: 0px;"></div></div><div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px; transform: translate(0px, 0px);"><div class="ace_line" style="height: 16px; top: 0px;"><span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height: 16px; top: 16px;">  <span class="ace_variable">"debug"</span>: <span class="ace_constant ace_language ace_boolean">true</span>,</div><div class="ace_line" style="height: 16px; top: 32px;">  <span class="ace_variable">"enableWorker"</span>: <span class="ace_constant ace_language ace_boolean">true</span>,</div><div class="ace_line" style="height: 16px; top: 48px;">  <span class="ace_variable">"liveBackBufferLength"</span>: <span class="ace_constant ace_numeric">900</span></div><div class="ace_line" style="height: 16px; top: 64px;"><span class="ace_paren ace_rparen">}</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="display: block; transform: translate(4px, 0px); width: 7px; height: 16px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 80px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 41px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 557px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">הההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההה</div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
           </div>
           <div class="config-editor-commands">
             <label for="config-persistence">
@@ -110,21 +110,16 @@
 
       </div>
 
-      <video id="video" controls="" autoplay="" class="videoCentered" src="blob:https://hls-js-latest.netlify.com/886be49f-1846-4052-89e2-c79f6134a64d"></video>
+      <video id="video" controls="" autoplay="" class="videoCentered" src="blob:https://hls-js-latest.netlify.com/8422f540-463e-4616-beb8-d6ebd549395a"></video>
       <br>
       <canvas id="bufferedCanvas" height="15" class="videoCentered" onclick="onClickBufferedRange(event);" style="display: block;" width="720"></canvas>
       <br>
       <br>
       <label class="center">Status:</label>
-      <pre id="statusOut" class="center" style="white-space: pre-wrap;">0.021 | Loading https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
-0.032 | Loading manifest and attaching video element...
-0.136 | Media element attached
-0.179 | No of audio tracks found: 0
-0.18 | No of quality levels found: 5
-0.18 | Manifest successfully loaded</pre>
+      <pre id="statusOut" class="center" style="white-space: pre-wrap;"></pre>
 
       <label class="center">Error:</label>
-      <pre id="errorOut" class="center" style="white-space: pre-wrap;">15.405 | Error while loading fragment https://test-streams.mux.dev/x36xhzz/url_8/url_599/193039199_mp4_h264_aac_fhd_7.ts</pre>
+      <pre id="errorOut" class="center" style="white-space: pre-wrap;"></pre>
 
       <div class="center" style="text-align: center;" id="toggleButtons">
         <button type="button" class="btn btn-sm" onclick="toggleTab(&#39;playbackControlTab&#39;);">Playback</button>
@@ -183,7 +178,7 @@
                     <p>Currently played level:</p>
                   </td>
                   <td>
-                    <div id="currentLevelControl" style="display: inline;"><button type="button" class="btn btn-sm btn-primary" onclick="hls.currentLevel=-1">auto</button><button type="button" class="btn btn-sm btn-success" onclick="hls.currentLevel=0">0 (240p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.currentLevel=1">1 (380p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.currentLevel=2">2 (480p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.currentLevel=3">3 (720p)</button><button type="button" class="btn btn-sm btn-primary" onclick="hls.currentLevel=4">4 (1080p)</button></div>
+                    <div id="currentLevelControl" style="display: inline;"><button type="button" class="btn btn-sm btn-primary" onclick="hls.currentLevel=-1">auto</button><button type="button" class="btn btn-sm btn-success" onclick="hls.currentLevel=0">0 (240p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.currentLevel=1">1 (380p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.currentLevel=2">2 (480p)</button><button type="button" class="btn btn-sm btn-primary" onclick="hls.currentLevel=3">3 (720p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.currentLevel=4">4 (1080p)</button></div>
                   </td>
                 </tr>
                 <tr>
@@ -199,7 +194,7 @@
                     <p>Currently loaded level:</p>
                   </td>
                   <td>
-                    <div id="loadLevelControl" style="display: inline;"><button type="button" class="btn btn-sm btn-primary" onclick="hls.loadLevel=-1">auto</button><button type="button" class="btn btn-sm btn-success" onclick="hls.loadLevel=0">0 (240p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.loadLevel=1">1 (380p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.loadLevel=2">2 (480p)</button><button type="button" class="btn btn-sm btn-primary" onclick="hls.loadLevel=3">3 (720p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.loadLevel=4">4 (1080p)</button></div>
+                    <div id="loadLevelControl" style="display: inline;"><button type="button" class="btn btn-sm btn-primary" onclick="hls.loadLevel=-1">auto</button><button type="button" class="btn btn-sm btn-success" onclick="hls.loadLevel=0">0 (240p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.loadLevel=1">1 (380p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.loadLevel=2">2 (480p)</button><button type="button" class="btn btn-sm btn-success" onclick="hls.loadLevel=3">3 (720p)</button><button type="button" class="btn btn-sm btn-primary" onclick="hls.loadLevel=4">4 (1080p)</button></div>
                   </td>
                 </tr>
                 <tr>
@@ -252,64 +247,20 @@
           <button type="button" class="btn btn-xs btn-success" onclick="goToMetrics()" style="font-size:18px">metrics link</button>
           <button type="button" class="btn btn-xs btn-success" onclick="goToMetricsPermaLink()" style="font-size:18px">metrics permalink</button>
           <button type="button" class="btn btn-xs btn-success" onclick="copyMetricsToClipBoard()" style="font-size:18px">copy metrics to clipboard</button>
-          <canvas id="bufferTimerange_c" width="1890" height="100" style="border: 1px solid rgb(0, 0, 0); display: inline-block;" onmousedown="timeRangeCanvasonMouseDown(event)" onmousemove="timeRangeCanvasonMouseMove(event)" onmouseup="timeRangeCanvasonMouseUp(event)" onmouseout="timeRangeCanvasonMouseOut(event);"></canvas>
-          <canvas id="bitrateTimerange_c" width="1890" height="100" style="border: 1px solid rgb(0, 0, 0); display: inline-block;"></canvas>
-          <canvas id="bufferWindow_c" width="1890" height="100" style="border: 1px solid rgb(0, 0, 0); display: inline-block;" onmousemove="windowCanvasonMouseMove(event);"></canvas>
-          <canvas id="videoEvent_c" width="1890" height="120" style="border: 1px solid rgb(0, 0, 0); display: inline-block;"></canvas>
-          <canvas id="loadEvent_c" width="1890" height="160" style="border: 1px solid rgb(0, 0, 0); display: inline-block;"></canvas><br>
+          <canvas id="bufferTimerange_c" width="1650" height="100" style="border: 1px solid rgb(0, 0, 0); display: inline-block;" onmousedown="timeRangeCanvasonMouseDown(event)" onmousemove="timeRangeCanvasonMouseMove(event)" onmouseup="timeRangeCanvasonMouseUp(event)" onmouseout="timeRangeCanvasonMouseOut(event);"></canvas>
+          <canvas id="bitrateTimerange_c" width="1650" height="100" style="border: 1px solid rgb(0, 0, 0); display: inline-block;"></canvas>
+          <canvas id="bufferWindow_c" width="1650" height="100" style="border: 1px solid rgb(0, 0, 0); display: none;" onmousemove="windowCanvasonMouseMove(event);"></canvas>
+          <canvas id="videoEvent_c" width="1650" height="280" style="border: 1px solid rgb(0, 0, 0); display: inline-block;"></canvas>
+          <canvas id="loadEvent_c" width="1650" height="220" style="border: 1px solid rgb(0, 0, 0); display: inline-block;"></canvas><br>
         </div>
       </div>
 
       <div class="center" id="statsDisplayTab" style="display: none;">
         <h4>Buffer &amp; Statistics</h4>
         <label>Buffer state:</label>
-        <pre id="bufferedOut" style="display: block;">Duration: 634.584
-Buffered: [0.023222, 90.000543] 
-Seekable: [0, 634.584] 
-Played: [0, 20.742629] 
-Buffer for audio contains: [0, 90.000543] 
-Buffer for video contains: [0.023222, 90.023232] 
-Dropped frames:4
-</pre>
+        <pre id="bufferedOut" style="display: block;"></pre>
         <label>General stats:</label>
-        <pre id="statisticsOut">{
-	"autoLevelAvg": 3.667,
-	"autoLevelCappingLast": -1,
-	"autoLevelCappingMax": -1,
-	"autoLevelCappingMin": -1,
-	"autoLevelLast": 4,
-	"autoLevelMax": 4,
-	"autoLevelMin": 3,
-	"autoLevelSwitch": 1,
-	"fragAvgKbps": null,
-	"fragAvgLatency": 563,
-	"fragAvgProcess": 748,
-	"fragBuffered": 9,
-	"fragBufferedBytes": 70223264,
-	"fragChangedAuto": 3,
-	"fragLastKbps": null,
-	"fragLastProcess": 751.4950000040699,
-	"fragLoadError": 1,
-	"fragMaxKbps": null,
-	"fragMaxLatency": 1801.7450000043027,
-	"fragMaxProcess": 2098.4599999937927,
-	"fragMinKbps": null,
-	"fragMinLatency": 105.85500000161119,
-	"fragMinProcess": 250.92000000586268,
-	"fraglastLatency": 534.3250000005355,
-	"fragparsingKbps": 772538,
-	"fragparsingMs": 727,
-	"levelNb": 5,
-	"levelParsed": 2,
-	"levelParsingUs": 870,
-	"levelStart": 3,
-	"tagList": {
-		"0": {
-			"0": "INF",
-			"1": "10.000"
-		}
-	}
-}</pre>
+        <pre id="statisticsOut"></pre>
       </div>
 
     </div>

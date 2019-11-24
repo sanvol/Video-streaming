@@ -12,4 +12,4 @@ http://0.0.0.0:8080/playerdash.html?mpd=http://0.0.0.0:8080/dash/video.mpd
 
 ### Streaming with hls
 
-http://0.0.0.0:8080/playerhls.html
+http://0.0.0.0:8080/playerhls.html?src=http://0.0.0.0:8080/hls/video.m3u8

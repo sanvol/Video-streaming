@@ -1,5 +1,8 @@
 # Live streaming
 
+More detailed report with preparation and other deployment options included
+- [Live Streaming report](Live_Streaming_report.pdf)
+
 ## Server
 
 - run `./start.sh`

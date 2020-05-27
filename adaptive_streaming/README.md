@@ -1,4 +1,7 @@
-# adaptive_streaming
+# Adaptive on-demand video streaming
+
+More detailed report with video data preparation included
+- [Adaptive Streaming report](Adaptive_Streaming_report.pdf)
 
 ### Start the server
 

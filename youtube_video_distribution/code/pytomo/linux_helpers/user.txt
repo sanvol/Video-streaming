@@ -1,4 +1,0 @@
-Y
-
-{'http': 'http://p-goodway.rd.francetelecom.fr:3128/', 'https': 'http://p-goodway.rd.francetelecom.fr:3128/'}
-
